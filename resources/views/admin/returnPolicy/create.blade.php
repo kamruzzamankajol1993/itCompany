@@ -1,13 +1,13 @@
 @extends('admin.master.master')
 
 @section('title')
-Add Return Policy
+Add Term And Condition
 @endsection
 
 @section('body')
 
 <div class="pagetitle">
-    <h1>Return Policy</h1>
+    <h1>Term And Condition</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
@@ -26,14 +26,14 @@ Add Return Policy
                 <h5 class="card-title">Add Data</h5>
 
 
-                <form class="row g-3" method="post" action="{{ route('returnPolicy.store') }}" enctype="multipart/form-data">
+                <form class="row g-3" method="post" action="{{ route('termAndCondition.store') }}" enctype="multipart/form-data">
 
                     @csrf
 
                     <div class="col-12">
-                      <label for="inputEmail4" class="form-label">Detail</label>
+                      <label for="inputEmail4" class="form-label">Term And Condition</label>
                         <!-- TinyMCE Editor -->
-            <textarea class="tinymce-editor" name="return_policies">
+            <textarea class="tinymce-editor" name="terms">
 
               </textarea><!-- End TinyMCE Editor -->
                     </div>

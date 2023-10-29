@@ -98,32 +98,101 @@
         </a>
       </li><!-- End Profile Page Nav -->
       <li class="nav-item ">
-        <a class="nav-link " href="">
+        <a class="nav-link {{ Route::is('homePageContact.index')  ? '' : 'collapsed' }}" href="{{ route('homePageContact.index') }}">
           <i class="bx bx-paste"></i>
-          <span>
-
-
-
-              Review List
-
-              </span>
+          <span>Home Page Content</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item ">
-        <a class="nav-link " href="">
-          <i class="bx bx-file"></i>
-          <span>Return Policy</span>
+        <a class="nav-link {{ Route::is('aboutus.index')  ? '' : 'collapsed' }}" href="{{ route('aboutus.index') }}">
+          <i class="bx bxs-user-badge"></i>
+          <span>About Us</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
 
       <li class="nav-item ">
-        <a class="nav-link  " href="">
-          <i class="bx bx-detail"></i>
-          <span>Privacy Policy</span>
+        <a class="nav-link {{ Route::is('frequentlyAskPartOne.index')  ? '' : 'collapsed' }}" href="{{ route('frequentlyAskPartOne.index') }}">
+          <i class="bx bx-comment-add"></i>
+          <span>Frequently Ask Part One</span>
         </a>
       </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item ">
+        <a class="nav-link {{ Route::is('frequentlyAskPartTwo.index')  ? '' : 'collapsed' }}" href="{{ route('frequentlyAskPartTwo.index') }}">
+          <i class="bx bx-comment-detail"></i>
+          <span>Frequently Ask Part Two</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item ">
+        <a class="nav-link {{ Route::is('testimonialPartOne.index')  ? '' : 'collapsed' }}" href="{{ route('testimonialPartOne.index') }}">
+          <i class="bx bxs-comment-detail"></i>
+          <span>Testimonial Part One</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+
+      <li class="nav-item ">
+        <a class="nav-link {{ Route::is('testimonialPartTwo.index')  ? '' : 'collapsed' }}" href="{{ route('testimonialPartTwo.index') }}">
+          <i class="bx bxs-detail"></i>
+          <span>Testimonial Part Two</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+
+      <li class="nav-item ">
+        <a class="nav-link {{ Route::is('chooseUs.index')  ? '' : 'collapsed' }}" href="{{ route('chooseUs.index') }}">
+          <i class="bx bxs-folder-plus"></i>
+          <span>Choose Us Section</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item ">
+        <a class="nav-link {{ Route::is('projectCount.index')  ? '' : 'collapsed' }}" href="{{ route('projectCount.index') }}">
+          <i class="bx bx-notepad"></i>
+          <span>Project Count</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+
+      <li class="nav-item ">
+        <a class="nav-link {{ Route::is('newsList.index')  ? '' : 'collapsed' }}" href="{{ route('newsList.index') }}">
+          <i class="bx bxs-news"></i>
+          <span>News List</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item ">
+        <a class="nav-link {{ Route::is('clientLogo.index')  ? '' : 'collapsed' }}" href="{{ route('clientLogo.index') }}">
+          <i class="bx bxs-news"></i>
+          <span>Client Logo List</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-heading">Team</li>
+
+
+      <li class="nav-item ">
+        <a class="nav-link {{ Route::is('team.index')  ? '' : 'collapsed' }}" href="{{ route('team.index') }}">
+          <i class="bx bxs-user-account"></i>
+          <span>Team List</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+
+      <li class="nav-item ">
+        <a class="nav-link {{ Route::is('teamDetail.index')  ? '' : 'collapsed' }}" href="{{ route('teamDetail.index') }}">
+          <i class="bx bxs-user-plus"></i>
+          <span>Team Detail List</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+
+
+
+      <li class="nav-heading">Contact Page </li>
 
       <li class="nav-item ">
         <a class="nav-link {{ Route::is('messagePartOne.index')  ? '' : 'collapsed' }}" href="{{ route('messagePartOne.index') }}">
@@ -167,6 +236,22 @@
         <a class="nav-link   {{ Route::is('systemInformation.index')  ? '' : 'collapsed' }}" href="{{ route('systemInformation.index') }}">
           <i class="bi bi-gear-fill"></i>
           <span>System Info</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+
+      <li class="nav-item ">
+        <a class="nav-link {{ Route::is('termAndCondition.index')  ? '' : 'collapsed' }}" href="{{ route('termAndCondition.index') }}">
+          <i class="bx bx-file"></i>
+          <span>Term & Condition</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+
+      <li class="nav-item ">
+        <a class="nav-link  {{ Route::is('privacyPolicy.index')  ? '' : 'collapsed' }}" href="{{ route('privacyPolicy.index') }}">
+          <i class="bx bx-detail"></i>
+          <span>Privacy Policy</span>
         </a>
       </li><!-- End Profile Page Nav -->
 

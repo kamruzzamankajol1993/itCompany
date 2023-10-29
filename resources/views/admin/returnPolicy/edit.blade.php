@@ -1,13 +1,13 @@
 @extends('admin.master.master')
 
 @section('title')
-Update Return Policy
+Update Term And Condition
 @endsection
 
 @section('body')
 
 <div class="pagetitle">
-    <h1>Return Policy</h1>
+    <h1>Term And Condition</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
@@ -26,15 +26,15 @@ Update Return Policy
                 <h5 class="card-title">Update Data</h5>
 
 
-                <form class="row g-3" method="post" action="{{ route('returnPolicy.update',$allSystemInfo->id) }}" enctype="multipart/form-data">
+                <form class="row g-3" method="post" action="{{ route('termAndCondition.update',$allSystemInfo->id) }}" enctype="multipart/form-data">
 
                     @csrf
                     @method('PUT')
                     <div class="col-12">
-                        <label for="inputEmail4" class="form-label">Detail</label>
+                        <label for="inputEmail4" class="form-label">Term And Condition</label>
                           <!-- TinyMCE Editor -->
-              <textarea class="tinymce-editor" name="return_policies">
-{!! $allSystemInfo->return_policies !!}
+              <textarea class="tinymce-editor" name="terms">
+{!! $allSystemInfo->terms !!}
                 </textarea><!-- End TinyMCE Editor -->
                       </div>
 

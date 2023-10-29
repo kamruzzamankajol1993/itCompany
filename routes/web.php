@@ -29,6 +29,8 @@ use App\Http\Controllers\Admin\TestimonialPartOneController;
 use App\Http\Controllers\Admin\TestimonialPartTwoController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\ChooseUsController;
+use App\Http\Controllers\Admin\TermController;
+use App\Http\Controllers\Admin\PrivacyPolicyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,7 +50,12 @@ Route::controller(AuthController::class)->group(function () {
 
 Route::group(['prefix' => 'admin'], function () {
 
-    Route::resource('ChooseUs', ChooseUsController::class);
+
+    Route::resource('privacyPolicy', PrivacyPolicyController::class);
+
+Route::resource('termAndCondition', TermController::class);
+
+    Route::resource('chooseUs', ChooseUsController::class);
 
 
     Route::resource('bannerList', BannerController::class);
@@ -63,7 +70,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('portfolioDetail', PortfolioDetailController::class);
     Route::resource('portfolio', PortfolioController::class);
 
-    Route::resource('projectCout', ProjectCountController::class);
+    Route::resource('projectCount', ProjectCountController::class);
     Route::resource('service', ServiceController::class);
     Route::resource('serviceDetail', ServiceDetailController::class);
     Route::resource('serviceOrder', ServiceOrderController::class);
@@ -72,7 +79,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('socialLink', SocialLinkController::class);
     Route::resource('team', TeamController::class);
     Route::resource('systemInformation', SystemInformationController::class);
-    Route::resource('team', TeamDetailController::class);
+    Route::resource('teamDetail', TeamDetailController::class);
     Route::resource('testimonialPartOne', TestimonialPartOneController::class);
     Route::resource('testimonialPartTwo', TestimonialPartTwoController::class);
 

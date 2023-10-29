@@ -1,12 +1,12 @@
 @extends('admin.master.master')
 
 @section('title')
-Return Policy
+Privacy Policy
 @endsection
 
 @section('body')
 <div class="pagetitle">
-    <h1>Return Policy</h1>
+    <h1>Privacy Policy</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
