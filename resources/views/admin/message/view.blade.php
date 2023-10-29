@@ -31,13 +31,13 @@ Message Detail
             <h5 class="card-title">Detail</h5>
 @include('flash_message')
 
-   
+
 
         <td>{{ $allSystemInfo->subject }}</td><br>
         <td>{{ $allSystemInfo->name }}</td><br>
         <td>{{ $allSystemInfo->email }}</td><br>
         <td>{{ $allSystemInfo->phone }}</td><br>
-        <td>{{ $allSystemInfo->message }}</td>
+        <td>{{ $allSystemInfo->description }}</td>
 
           </div>
         </div>

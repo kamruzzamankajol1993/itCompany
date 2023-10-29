@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('postcode')->nullable();
             $table->string('amount')->nullable();
             $table->string('paymentType')->nullable();
+            $table->string('status')->nullable();
+
            $table->timestamps();
         });
     }

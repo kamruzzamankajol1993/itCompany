@@ -1,13 +1,13 @@
 @extends('admin.master.master')
 
 @section('title')
-Add Banner
+Add Service Title
 @endsection
 
 @section('body')
 
 <div class="pagetitle">
-    <h1>Banner</h1>
+    <h1>Service Title</h1>
     <nav>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
@@ -29,12 +29,29 @@ Add Banner
                 <form class="row g-3" method="post" action="{{ route('bannerList.store') }}" enctype="multipart/form-data">
 
                     @csrf
+                    <div class="col-12">
+                        <label for="inputNanme4" class="form-label">Title One</label>
+                        <input type="text" name="bannerTitle" class="form-control" id="inputNanme4">
+                      </div>
+
+
+                      <div class="col-12">
+                        <label for="inputNanme4" class="form-label">Title Two</label>
+                        <input type="text" name="bannerButtonLink" class="form-control" id="inputNanme4">
+                      </div>
+
+
+                      <div class="col-12">
+                        <label for="inputNanme4" class="form-label">Button Name</label>
+                        <input type="text" name="bannerButtonName" class="form-control" id="inputNanme4">
+                      </div>
+
 
 
                       <div class="col-12">
                         <label for="inputAddress2" class="form-label">bannerImage</label>
                         <input type="file" class="form-control"  name="bannerImage" id="inputAddress2">
-                        <small class="text-danger">Size : 1120*480</small>
+                        <small class="text-danger">Size : 1894*840</small>
                       </div>
 
 

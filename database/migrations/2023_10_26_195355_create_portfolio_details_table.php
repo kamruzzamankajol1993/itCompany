@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('webLink')->nullable();
             $table->string('location')->nullable();
             $table->text('descriptionOne')->nullable();
+            $table->string('serviceImage')->nullable();
             $table->timestamps();
         });
     }

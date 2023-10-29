@@ -26,47 +26,49 @@ Add System Information
                 <h5 class="card-title">Add Data</h5>
 
 
-                <form class="row g-3" method="post" action="{{ route('systemInfo.store') }}" enctype="multipart/form-data">
+                <form class="row g-3" method="post" action="{{ route('systemInformation.store') }}" enctype="multipart/form-data">
 
                     @csrf
                     <div class="col-6">
-                      <label for="inputNanme4" class="form-label">websiteName</label>
-                      <input type="text" name="websiteName" class="form-control" id="inputNanme4">
+                      <label for="inputNanme4" class="form-label">siteName</label>
+                      <input type="text" name="siteName" class="form-control" id="inputNanme4">
                     </div>
                     <div class="col-6">
-                      <label for="inputEmail4" class="form-label">websitePhone</label>
-                      <input type="number" class="form-control" name="websitePhone" id="inputEmail4">
+                      <label for="inputEmail4" class="form-label">sitePhone</label>
+                      <input type="number" class="form-control" name="sitePhone" id="inputEmail4">
                     </div>
                     <div class="col-6">
-                      <label for="inputPassword4" class="form-label">websiteEmail</label>
-                      <input type="email" class="form-control" name="websiteEmail" id="inputPassword4">
+                      <label for="inputPassword4" class="form-label">siteEmail</label>
+                      <input type="email" class="form-control" name="siteEmail" id="inputPassword4">
                     </div>
                     <div class="col-6">
-                      <label for="inputAddress" class="form-label">websiteAddress</label>
-                      <input type="text" class="form-control" name="websiteAddress" id="inputAddress" placeholder="1234 Main St">
+                      <label for="inputAddress" class="form-label">siteAddress</label>
+                      <input type="text" class="form-control" name="siteAddress" id="inputAddress" placeholder="1234 Main St">
                     </div>
 
 
                     <div class="col-6">
-                        <label for="inputAddress1" class="form-label">websiteAbout</label>
-                        <input type="text" class="form-control" name="websiteAbout" id="inputAddress1">
+                        <label for="inputAddress1" class="form-label">siteAbout</label>
+                        <input type="text" class="form-control" name="siteAbout" id="inputAddress1">
                       </div>
 
 
+
                       <div class="col-6">
-                        <label for="inputAddress11" class="form-label">Url name</label>
-                        <input type="text" class="form-control" name="url_name" id="inputAddress11">
+                        <label for="inputAddress2" class="form-label">adminSiteLogo</label>
+                        <input type="file" class="form-control"  name="adminSiteLogo" id="inputAddress2">
+                        <small class="text-danger">Size : 139*50</small>
                       </div>
 
                       <div class="col-6">
-                        <label for="inputAddress2" class="form-label">websiteLogo</label>
-                        <input type="file" class="form-control"  name="websiteLogo" id="inputAddress2">
-                        <small class="text-danger">Size : 386*99</small>
+                        <label for="inputAddress2" class="form-label">siteLogo</label>
+                        <input type="file" class="form-control"  name="siteLogo" id="inputAddress2">
+                        <small class="text-danger">Size : 139*50</small>
                       </div>
 
                       <div class="col-6">
-                        <label for="inputAddress3" class="form-label">websiteIcon</label>
-                        <input type="file" class="form-control"  name="websiteIcon" id="inputAddress3">
+                        <label for="inputAddress3" class="form-label">siteIcon</label>
+                        <input type="file" class="form-control"  name="siteIcon" id="inputAddress3">
                         <small class="text-danger">Size : 50*50</small>
                       </div>
 

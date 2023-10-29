@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $systemDataAll = SystemInformation::latest()->first();
 
-        $allMessageListCount = Message::count();
+        $allMessageListCount = Message::where('status',0)->count();
 
         $orderListCount = ServiceOrder::count();
 

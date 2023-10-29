@@ -22,7 +22,7 @@ System Information
 
         <div class="card">
           <div class="card-header">
-            <a type="button" class="btn btn-primary btn-sm" href="{{ route('systemInfo.create') }}">
+            <a type="button" class="btn btn-primary btn-sm" href="{{ route('systemInformation.create') }}">
                 <i class="bx bxs-plus-circle"></i> Add New Info
             </a>
 
@@ -37,14 +37,15 @@ System Information
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">websiteLogo</th>
-        <th scope="col">websiteIcon</th>
-        <th scope="col">websiteName</th>
-        <th scope="col">websitePhone</th>
-        <th scope="col">websiteEmail</th>
-        <th scope="col">websiteAbout</th>
-        <th scope="col">websiteAddress</th>
-        <th scope="col">websiteAdminUrl</th>
+        <th scope="col">adminSiteLogo</th>
+        <th scope="col">siteLogo</th>
+        <th scope="col">siteIcon</th>
+        <th scope="col">siteName</th>
+        <th scope="col">sitePhone</th>
+        <th scope="col">siteEmail</th>
+        <th scope="col">siteAbout</th>
+        <th scope="col">siteAddress</th>
+
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -52,22 +53,23 @@ System Information
         @foreach($allSystemInfo as $key=>$allSystemInfos)
       <tr>
         <th scope="row">{{ $key+1 }}</th>
-        <td> <img src="{{ asset('/') }}{{ $allSystemInfos->websiteLogo }}" width="80px" alt=""></td>
-        <td><img src="{{ asset('/') }}{{ $allSystemInfos->websiteIcon }}" width="80px" alt=""></td>
-        <td>{{ $allSystemInfos->websiteName }}</td>
-        <td>{{ $allSystemInfos->websitePhone }}</td>
-        <td>{{ $allSystemInfos->websiteEmail }}</td>
-        <td>{{ $allSystemInfos->websiteAbout }}</td>
-        <td>{{ $allSystemInfos->websiteAddress }}</td>
-        <td>{{ $allSystemInfos->url_name }}</td>
+        <td> <img src="{{ asset('/') }}{{ $allSystemInfos->adminSiteLogo }}" width="80px" alt=""></td>
+        <td> <img src="{{ asset('/') }}{{ $allSystemInfos->siteLogo }}" width="80px" alt=""></td>
+        <td><img src="{{ asset('/') }}{{ $allSystemInfos->siteIcon }}" width="80px" alt=""></td>
+        <td>{{ $allSystemInfos->siteName }}</td>
+        <td>{{ $allSystemInfos->sitePhone }}</td>
+        <td>{{ $allSystemInfos->siteEmail }}</td>
+        <td>{{ $allSystemInfos->siteAbout }}</td>
+        <td>{{ $allSystemInfos->siteAddress }}</td>
+
         <td>
-            <a type="button" class="btn btn-success btn-sm" href="{{ route('systemInfo.edit',$allSystemInfos->id) }}">
+            <a type="button" class="btn btn-success btn-sm" href="{{ route('systemInformation.edit',$allSystemInfos->id) }}">
                 <i class="bx bxs-pencil"></i>
               </a>
 
             <a type="button" class="btn btn-danger btn-sm"  href="javascript:void(0);"  onclick="pdeleteTag({{ $allSystemInfos->id}})" ><i class="bx bxs-trash font-size-18"></i></a>
 
-            <form id="delete-form-{{ $allSystemInfos->id }}" action="{{ route('systemInfo.destroy',$allSystemInfos->id) }}" method="POST" style="display: none;">
+            <form id="delete-form-{{ $allSystemInfos->id }}" action="{{ route('systemInformation.destroy',$allSystemInfos->id) }}" method="POST" style="display: none;">
 
                                               @csrf
                                               @method('delete')

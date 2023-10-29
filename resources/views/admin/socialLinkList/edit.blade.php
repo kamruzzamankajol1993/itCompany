@@ -26,7 +26,7 @@ Update Social Link
                 <h5 class="card-title">Update Data</h5>
 
 
-                <form class="row g-3" method="post" action="{{ route('socialLinkList.update',$allSystemInfo->id) }}" enctype="multipart/form-data">
+                <form class="row g-3" method="post" action="{{ route('socialLink.update',$allSystemInfo->id) }}" enctype="multipart/form-data">
 
                     @csrf
                     @method('PUT')
@@ -38,17 +38,19 @@ Update Social Link
                       <select name="linkName" class="form-control" id="inputNanme4">
 
                         <option value="">--Please Select--</option>
-                        <option value="Facebook" {{ 'Facebook' == $allSystemInfo->linkName ? 'selected':'' }}>Facebook</option>
-                        <option value="X" {{ 'X' == $allSystemInfo->linkName ? 'selected':'' }}>X</option>
-                        <option value="Instagram" {{ 'Instagram' == $allSystemInfo->linkName ? 'selected':'' }}>Instagram</option>
-                        <option value="Youtube" {{ 'Youtube' == $allSystemInfo->linkName ? 'selected':'' }}>Youtube</option>
+                        <option value="Facebook" {{ 'Facebook' == $allSystemInfo->socialLinkName ? 'selected':'' }}>Facebook</option>
+                        <option value="X" {{ 'X' == $allSystemInfo->socialLinkName ? 'selected':'' }}>X</option>
+                        <option value="Instagram" {{ 'Instagram' == $allSystemInfo->socialLinkName ? 'selected':'' }}>Instagram</option>
+                        <option value="Youtube" {{ 'Youtube' == $allSystemInfo->socialLinkName ? 'selected':'' }}>Youtube</option>
+
+                        <option value="LinkedIn" {{ 'LinkedIn' == $allSystemInfo->socialLinkName ? 'selected':'' }}>LinkedIn</option>
                       </select>
 
 
                     </div>
                     <div class="col-6">
                       <label for="inputEmail4" class="form-label">linkMain</label>
-                      <input type="url" class="form-control" value="{{ $allSystemInfo->linkMain }}" name="linkMain" id="inputEmail4">
+                      <input type="url" class="form-control" value="{{ $allSystemInfo->socialLink }}" name="linkMain" id="inputEmail4">
                     </div>
 
 

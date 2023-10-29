@@ -26,7 +26,7 @@ Add Social Link
                 <h5 class="card-title">Add Data</h5>
 
 
-                <form class="row g-3" method="post" action="{{ route('socialLinkList.store') }}" enctype="multipart/form-data">
+                <form class="row g-3" method="post" action="{{ route('socialLink.store') }}" enctype="multipart/form-data">
 
                     @csrf
                     <div class="col-6">
@@ -38,6 +38,8 @@ Add Social Link
                         <option value="X">X</option>
                         <option value="Instagram">Instagram</option>
                         <option value="Youtube">Youtube</option>
+
+                        <option value="LinkedIn">LinkedIn</option>
                       </select>
                     </div>
                     <div class="col-6">

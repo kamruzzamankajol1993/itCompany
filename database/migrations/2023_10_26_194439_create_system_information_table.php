@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('siteEmail')->nullable();
             $table->string('sitePhone')->nullable();
             $table->text('siteAddress')->nullable();
+            $table->string('adminSiteLogo')->nullable();
             $table->string('siteLogo')->nullable();
             $table->string('siteIcon')->nullable();
             $table->text('siteAbout')->nullable();

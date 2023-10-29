@@ -57,7 +57,7 @@ Message List
         <td>{{ $allSystemInfos->name }}</td>
         <td>{{ $allSystemInfos->email }}</td>
         <td>{{ $allSystemInfos->phone }}</td>
-        <td>{{ $allSystemInfos->message }}</td>
+        <td>{{ $allSystemInfos->description }}</td>
 <td>
 
 @if($allSystemInfos->status == 0)
@@ -69,7 +69,7 @@ Seen
 </td>
 
         <td>
-            
+
                @if($allSystemInfos->status == 0)
             <a type="button" class="btn btn-success btn-sm" href="{{ route('messageList.show',$allSystemInfos->id) }}">
                 <i class="bx bxs-pencil"></i>

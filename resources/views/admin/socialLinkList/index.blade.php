@@ -22,7 +22,7 @@ Social Link
 
         <div class="card">
           <div class="card-header">
-            <a type="button" class="btn btn-primary btn-sm" href="{{ route('socialLinkList.create') }}">
+            <a type="button" class="btn btn-primary btn-sm" href="{{ route('socialLink.create') }}">
                 <i class="bx bxs-plus-circle"></i> Add New Info
             </a>
 
@@ -49,16 +49,16 @@ Social Link
       <tr>
         <th scope="row">{{ $key+1 }}</th>
 
-        <td>{{ $allSystemInfos->linkName }}</td>
-        <td>{{ $allSystemInfos->linkMain }}</td>
+        <td>{{ $allSystemInfos->socialLinkName }}</td>
+        <td>{{ $allSystemInfos->socialLink }}</td>
         <td>
-            <a type="button" class="btn btn-success btn-sm" href="{{ route('socialLinkList.edit',$allSystemInfos->id) }}">
+            <a type="button" class="btn btn-success btn-sm" href="{{ route('socialLink.edit',$allSystemInfos->id) }}">
                 <i class="bx bxs-pencil"></i>
               </a>
 
             <a type="button" class="btn btn-danger btn-sm"  href="javascript:void(0);"  onclick="pdeleteTag({{ $allSystemInfos->id}})" ><i class="bx bxs-trash font-size-18"></i></a>
 
-            <form id="delete-form-{{ $allSystemInfos->id }}" action="{{ route('socialLinkList.destroy',$allSystemInfos->id) }}" method="POST" style="display: none;">
+            <form id="delete-form-{{ $allSystemInfos->id }}" action="{{ route('socialLink.destroy',$allSystemInfos->id) }}" method="POST" style="display: none;">
 
                                               @csrf
                                               @method('delete')
