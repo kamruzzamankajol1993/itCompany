@@ -31,6 +31,13 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\ChooseUsController;
 use App\Http\Controllers\Admin\TermController;
 use App\Http\Controllers\Admin\PrivacyPolicyController;
+
+
+use App\Http\Controllers\Front\CheckoutController;
+use App\Http\Controllers\Front\ContactController;
+use App\Http\Controllers\Front\MainController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,9 +49,15 @@ use App\Http\Controllers\Admin\PrivacyPolicyController;
 |
 */
 
+Route::controller(MainController::class)->group(function () {
+
+    Route::get('/','index')->name('index');
+
+});
+
 Route::controller(AuthController::class)->group(function () {
 
-    Route::get('/','loginAdmin')->name('loginAdmin');
+    Route::get('/loginAdmin','loginAdmin')->name('loginAdmin');
     Route::get('/registrationAdmin','registrationAdmin')->name('registrationAdmin');
 });
 
