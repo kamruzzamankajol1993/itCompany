@@ -27,6 +27,7 @@ use App\Models\TeamDetail;
 use App\Models\MessagePartOne;
 use App\Models\TermAndCondition;
 use App\Models\PrivacyPolicy;
+use Response;
 class MainController extends Controller
 {
 
@@ -86,6 +87,30 @@ class MainController extends Controller
 
         $servicePrice = ServicePrice::where('serviceDetailId',$serviceListOne->id)->latest()->get();
         return view('front.serviceInformation',compact('servicePrice','serviceListOne','serviceList','serviceListR'));
+    }
+
+
+    public function servicePdf($id){
+
+        $get_file_data = ServiceDetail::where('id',$id)->value('servicePdfFile');
+
+        //dd($get_file_data);
+
+        $file_path = url('public/'.$get_file_data);
+                                $filename  = pathinfo($file_path, PATHINFO_FILENAME);
+
+        $file= public_path('/'). $get_file_data;
+
+        $headers = array(
+                  'Content-Type: application/pdf',
+                );
+
+        // return Response::download($file,$filename.'.pdf', $headers);
+
+        return Response::make(file_get_contents($file), 200, [
+            'content-type'=>'application/pdf',
+        ]);
+
     }
 
 

@@ -49,7 +49,7 @@
                         <!--Start Services Details Sidebar Single-->
                         <div class="sidebar-widget service-sidebar-single mt-4">
                             <div class="service-sidebar-single-btn wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1200m">
-                                <a href="#" class="theme-btn btn-style-one d-grid"><span class="btn-title"><span class="fas fa-file-pdf"></span> download pdf file</span></a>
+                                <a href="{{ route('servicePdf',$serviceListOne->id) }}" class="theme-btn btn-style-one d-grid" target="_blank"><span class="btn-title"><span class="fas fa-file-pdf"></span> download pdf file</span></a>
                             </div>
                         </div>
                     </div>

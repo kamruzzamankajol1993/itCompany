@@ -66,6 +66,9 @@ Route::controller(MainController::class)->group(function () {
     Route::post('/sendMessage','sendMessage')->name('sendMessage');
     Route::get('/about_us','about_us')->name('about_us');
 
+
+    Route::get('/servicePdf/{id}','servicePdf')->name('servicePdf');
+
     Route::get('/serviceList','serviceList')->name('serviceList');
     Route::get('/serviceInformation/{id}','serviceInformation')->name('serviceInformation');
 
