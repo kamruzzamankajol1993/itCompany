@@ -70,15 +70,15 @@
                         <h5 class="widget-title">Explore</h5>
                         <div class="widget-content">
                             <ul class="user-links two-column">
-                                <li><a href="#">Meet Our Team</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">What We Do</a></li>
-                                <li><a href="#">Support</a></li>
-                                <li><a href="#">Latest News</a></li>
-                                <li><a href="#">New Projects</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="{{ route('teamList') }}">Meet Our Team</a></li>
+                                <li><a href="{{ route('about_us') }}">About</a></li>
+                                <li><a href="{{ route('serviceList') }}">What We Do</a></li>
+                                <li><a href="{{ route('term_and_condition') }}">Term & Condition</a></li>
+                                <li><a href="{{ route('privacy_policy') }}">Privacy Policy</a></li>
+                                <li><a href="{{ route('projectList') }}">New Projects</a></li>
+                                <li><a href="{{ route('contact_us') }}">Contact</a></li>
 
-                                <li><a href="#">Faqs</a></li>
+                                <li><a href="{{ route('faq') }}">Faqs</a></li>
                             </ul>
                         </div>
                     </div>

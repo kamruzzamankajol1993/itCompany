@@ -62,8 +62,11 @@ Service Order
         $catName1 = DB::table('service_prices')->where('id',$allSystemInfos->servicePriceId)
         ->first();
 
+        $serviceid = DB::table('service_details')->where('id',$catName1->serviceDetailId)
+        ->value('serviceId');
 
-        $catName = DB::table('services')->where('id',$catName1->serviceDetailId)
+
+        $catName = DB::table('services')->where('id',$serviceid)
         ->value('serviceTitle');
 
                 ?>

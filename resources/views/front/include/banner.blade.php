@@ -19,7 +19,7 @@ echo $new_string;
 
                     </h1>
                     <div class="btn-box animate-2">
-                        <a href="#" class="theme-btn btn-style-one hover-light"><span class="btn-title">{{ $allBannerInfo->bannerButtonName }}</span></a>
+                        <a href="{{route('about_us')}}" class="theme-btn btn-style-one hover-light"><span class="btn-title">{{ $allBannerInfo->bannerButtonName }}</span></a>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@ echo $new_string;
 
         <!-- Slide Item -->
         <div class="slide-item">
-            <div class="bg-image" style="background-image: url({{ asset('/') }}{{ $allBannerInfo->bannerImage }});"></div>
+            <div class="bg-image" style="background-image: url({{ asset('/') }}{{ $allBannerInfo->bannerImageTwo }});"></div>
             <div class="auto-container">
                 <div class="content-box">
                     <h1 class="title animate-1">                     <?php
@@ -39,7 +39,7 @@ echo $new_string;
                         echo $new_string;
                         ?></h1>
                     <div class="btn-box animate-2">
-                        <a href="#" class="theme-btn btn-style-one hover-light"><span class="btn-title">{{ $allBannerInfo->bannerButtonName }}</span></a>
+                        <a href="{{route('about_us')}}" class="theme-btn btn-style-one hover-light"><span class="btn-title">{{ $allBannerInfo->bannerButtonName }}</span></a>
                     </div>
                 </div>
             </div>

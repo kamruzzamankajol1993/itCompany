@@ -56,6 +56,13 @@ Update Banner
                        <img src="{{ asset('/') }}{{ $allSystemInfo->bannerImage }}" width="80px" alt="">
                       </div>
 
+                      <div class="col-12">
+                        <label for="inputAddress2" class="form-label">bannerImageTwo</label>
+                        <input type="file" class="form-control"  name="bannerImageTwo" id="inputAddress2">
+                        <small class="text-danger">Size : 1894*840</small>
+                        <img src="{{ asset('/') }}{{ $allSystemInfo->bannerImageTwo }}" width="80px" alt="">
+                      </div>
+
 
 
 

@@ -6,8 +6,13 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>@yield('title')</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta property="og:url"           content="{{ url()->current() }}" />
+  <meta property="og:type"          content="{{ $systemDataAll->siteName }}" />
+  <meta property="og:title"         content="{{ $systemDataAll->siteName }}." />
+  <meta property="og:description"   content="{!!  substr(strip_tags($systemDataAll->siteAbout), 0, 300) !!}" />
+  <meta property="og:image"         content="{{asset('/')}}{{ $systemDataAll->siteLogo }}"  />
+  <meta property="og:image:width" content="720" />
+  <meta property="og:image:height" content="720" />
 
   <!-- Favicons -->
   <link href="{{asset('/')}}{{ $systemDataAll->siteIcon }}" rel="icon">

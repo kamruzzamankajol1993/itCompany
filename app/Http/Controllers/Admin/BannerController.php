@@ -75,6 +75,20 @@ if ($request->hasfile('bannerImage')) {
 
   }
 
+  if ($request->hasfile('bannerImageTwo')) {
+
+    $productImage = $request->file('bannerImageTwo');
+      $imageName = time().$productImage->getClientOriginalName();
+      $directory = 'public/uploads/';
+      $imageUrl = $directory.$imageName;
+
+      $img=Image::make($productImage)->resize(1894,840);
+      $img->save($imageUrl);
+
+       $user->bannerImageTwo =  'public/uploads/'.$imageName;
+
+  }
+
    $user->save();
 
    return redirect()->route('bannerList.index')->with('success','Updated successfully!');
@@ -102,6 +116,21 @@ if ($request->hasfile('bannerImage')) {
           $img->save($imageUrl);
 
            $user->bannerImage =  'public/uploads/'.$imageName;
+
+      }
+
+
+      if ($request->hasfile('bannerImageTwo')) {
+
+        $productImage = $request->file('bannerImageTwo');
+          $imageName = time().$productImage->getClientOriginalName();
+          $directory = 'public/uploads/';
+          $imageUrl = $directory.$imageName;
+
+          $img=Image::make($productImage)->resize(1894,840);
+          $img->save($imageUrl);
+
+           $user->bannerImageTwo =  'public/uploads/'.$imageName;
 
       }
 

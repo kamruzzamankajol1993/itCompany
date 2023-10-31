@@ -6,6 +6,16 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<meta property="og:url"           content="{{ url()->current() }}" />
+<meta property="og:type"          content="{{ $systemDataAll->siteName }}" />
+<meta property="og:title"         content="{{ $systemDataAll->siteName }}." />
+<meta property="og:description"   content="{!!  substr(strip_tags($systemDataAll->siteAbout), 0, 300) !!}" />
+<meta property="og:image"         content="{{asset('/')}}{{ $systemDataAll->siteLogo }}"  />
+<meta property="og:image:width" content="720" />
+<meta property="og:image:height" content="720" />
+
+
 <title>@yield('title')</title>
 <!-- Stylesheets -->
 <link href="{{asset('/')}}public/front/css/bootstrap.min.css" rel="stylesheet">
@@ -30,7 +40,7 @@
 	@include('front.include.header')
 	<!--End Main Header -->
 
-	
+
 
 	@yield('body')
 

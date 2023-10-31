@@ -74,7 +74,7 @@ Add Frequently Ask Part One
 
                       <div class="col-12">
                         <label for="inputAddress2" class="form-label">descriptionThree	</label>
-                        <input type="text"  class="form-control"  name="descriptionThree	" id="inputAddress2">
+                        <input type="text"  class="form-control"  name="descriptionThree" id="inputAddress2">
 
                       </div>
 

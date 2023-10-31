@@ -55,49 +55,32 @@
                         <li ><a href="{{ route('index') }}">Home</a>
 
                         </li>
-                        <li class="dropdown"><a href="page-about.html">Pages</a>
+
+                        <li><a href="{{ route('about_us') }}">About Us</a></li>
+
+                        <li class="dropdown"><a href="{{ route('serviceList') }}">Services</a>
                             <ul>
-                                <li><a href="page-about.html">About</a></li>
-                                <li class="dropdown"><a href="page-team.html">Team</a>
-                                    <ul>
-                                        <li><a href="page-team.html">Team Grid</a></li>
-                                        <li><a href="page-team-details.html">Team Details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="shop-products.html">Shop</a>
-                                    <ul>
-                                        <li><a href="shop-products.html">Products</a></li>
-                                        <li><a href="shop-products-sidebar.html">Products with Sidebar</a></li>
-                                        <li><a href="shop-product-details.html">Product Details</a></li>
-                                        <li><a href="shop-cart.html">Cart</a></li>
-                                        <li><a href="shop-checkout.html">Checkout</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="page-testimonial.html">Testimonial</a></li>
-                                <li><a href="page-pricing.html">Pricing</a></li>
-                                <li><a href="page-faq.html">FAQ</a></li>
-                                <li><a href="page-404.html">Page 404</a></li>
+                                @foreach($allServiceInfoH as $allServiceInfoHs)
+                                <li><a href="{{ route('serviceInformation',$allServiceInfoHs->id) }}">{{ $allServiceInfoHs->serviceTitle }}</a></li>
+                                @endforeach
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="page-services.html">Services</a>
+
+                        <li class="dropdown"><a href="{{ route('projectList') }}">Projects</a>
                             <ul>
-                                <li><a href="page-services.html">Services Grid</a></li>
-                                <li><a href="page-service-details.html">Service Details</a></li>
+                                @foreach($allPortfolioInfoH as $allPortfolioInfoHs)
+                                <li><a href="{{ route('projectInformation',$allPortfolioInfoHs->id) }}">{{ $allPortfolioInfoHs->title }}</a></li>
+@endforeach
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="page-projects.html">Projects</a>
-                            <ul>
-                                <li><a href="page-projects.html">Projects Grid</a></li>
-                                <li><a href="page-project-details.html">Project Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="news-grid.html">News</a>
-                            <ul>
-                                <li><a href="news-grid.html">News Grid</a></li>
-                                <li><a href="news-details.html">News Details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="page-contact.html">Contact</a></li>
+
+                        <li><a href="{{ route('teamList') }}">Team</a></li>
+
+                        <li><a href="{{ route('newsList') }}">News</a></li>
+
+                        <li><a href="{{ route('contact_us') }}">Contact Us</a></li>
+
+
                     </ul>
                 </nav>
                 <!-- Main Menu End-->

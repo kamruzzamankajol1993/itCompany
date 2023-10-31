@@ -49,9 +49,46 @@ use App\Http\Controllers\Front\MainController;
 |
 */
 
+
+Route::controller(CheckoutController::class)->group(function () {
+
+
+    Route::get('/success','success')->name('success');
+    Route::get('/fail','fail')->name('fail');
+
+
+    Route::post('/confirm_order','confirm_order')->name('confirm_order');
+    Route::get('/customer_checkout/{id}','customer_checkout')->name('customer_checkout');
+});
 Route::controller(MainController::class)->group(function () {
 
     Route::get('/','index')->name('index');
+    Route::post('/sendMessage','sendMessage')->name('sendMessage');
+    Route::get('/about_us','about_us')->name('about_us');
+
+    Route::get('/serviceList','serviceList')->name('serviceList');
+    Route::get('/serviceInformation/{id}','serviceInformation')->name('serviceInformation');
+
+
+    Route::get('/projectList','projectList')->name('projectList');
+    Route::get('/projectInformation/{id}','projectInformation')->name('projectInformation');
+
+
+    Route::get('/teamList','teamList')->name('teamList');
+    Route::get('/newsList','newsList')->name('newsList');
+
+    Route::get('/team_detail/{id}','team_detail')->name('team_detail');
+
+    Route::get('/news_detail/{id}','news_detail')->name('news_detail');
+
+
+    Route::get('/contact_us','contact_us')->name('contact_us');
+
+
+    Route::get('/faq','faq')->name('faq');
+    Route::get('/privacy_policy','privacy_policy')->name('privacy_policy');
+
+    Route::get('/term_and_condition','term_and_condition')->name('term_and_condition');
 
 });
 
